@@ -7,6 +7,7 @@
 cbuffer CBParam : register(b0)
 {
     float4 baseColor;
+    float4 subColor;
 };
 
 // ----------------------------------------------------------

@@ -12,6 +12,7 @@ namespace
     struct CBParam // register(b0)
     {
         Color baseColor;
+        Color subColor;
     };
     constexpr int CBSlot = 0;
 
@@ -48,7 +49,10 @@ void CBController::Update()
     {
         colorIndex = (colorIndex + 1) % tableSize;
     }
-
+    if (Input::GetKeyDown(Keyboard::Up))
+    {
+        colorIndex = (colorIndex - 1) % tableSize;
+    }
 
     CBParam cb;
 
